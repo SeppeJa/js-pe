@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Registreer</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form>
+                    <!-- https://www.javascripttutorial.net/javascript-dom/javascript-form/
+                    https://www.w3schools.com/bootstrap/bootstrap_forms.asp
+                    https://www.w3schools.com/html/html_forms.asp
+                    https://www.w3schools.com/bootstrap/bootstrap_alerts.asp-->
+                    <h1>Registreer</h1>
+                    <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="voornaam">Voornaam:</label><br>
+                            <input type="text" id="voornaam" name="voornaam" class="form-control" placeholder="Uw voornaam" />
+                        </div>
+                        <div class="col-6">
+                            <label for="naam">Naam:</label> <br>
+                            <input type="text" id="naam" name="naam" class="form-control" placeholder="Uw naam" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="gebruikersnaam">Gebruikersnaam:</label><br>
+                            <input type="" id="gebruikersnaam" name="gebruikersnaam" class="form-control" placeholder="Uw gebruikersnaam" />
+                        </div>
+                        <div class="col-6">
+                            <label for="email">E-mailadres:</label> <br>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="mail@example.be" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="wachtwoord">Wachtwoord:</label><br>
+                            <input type="password" id="wachtwoord" name="wachtwoord" class="form-control" />
+                        </div>
+                        <div class="col-6">
+                            <label for="herhaalWachtwoord">Herhaal Wachtwoord:</label><br>
+                            <input type="password" id="herhaalWachtwoord" name="herhaalWachtwoord" class="form-control" />
+                            <small>Je wachtwoord moet minstens 8 tekens lang zijn</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="adres">Adres:</label><br>
+                            <input type="text" id="adres" name="adres" class="form-control" placeholder="Uw adres en huisnummer" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="land">land:</label><br>
+                            <select name="landen" id="landen" class="form-control">
+                                    <option value="">Kies een land</option>
+                                    <option value="belgië">België</option>
+                                    <option value="nederland">Nederland</option>
+                                    <option value="duitsland">Duitsland</option>
+                                </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="provincie">Provincie:</label><br>
+                            <select class="form-control" name="provincies" id="provincies">
+                                    <option value="">Kies een provincie</option>
+                                    <option value="antwerpen">Antwerpen</option>
+                                    <option value="west-vlaanderen">West-Vlaanderen</option>
+                                    <option value="brussel">Brussel</option>
+                                </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="postcode">postcode:</label><br>
+                            <input type="number" id="postcode" name="postcode" class="form-control" />
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Hou me op de hoogte</h5>
+                            <div>
+                                <input type="checkbox" name="nieuwsbrief" id="nieuwsbrief" />
+                                <label for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="av" id="av" />
+                                <label for="av">Ik ga akkoord met de algemene voorwaarden.</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h5>Betaling</h5>
+                            <div class="d-block">
+                                <div class="custom-control">
+                                    <input type="radio" name="betaling" id="bankingApp" value="Banking App" checked />
+                                    <label for="bankingApp">Banking App</label>
+                                </div>
+                                <div class="custom-control">
+                                    <input type="radio" name="betaling" id="overschrijving" value="Overschrijving" />
+                                    <label for="overschrijving">Overschrijving</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="betaling" id="visaCard" value="Visa Card" />
+                                    <label for="visaCard">Visa Card</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="betaling" id="paypal" value="PayPal" />
+                                    <label for="PayPal">PayPal</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <!--https://www.w3schools.com/jsref/event_onclick.asp voor doorsturen van gegevens-->
+                    <button class="btn-primary col-12" type="button" onclick="klikkenKnop()">Wave your magic wand</button>
+
+                </form>
+            </div>
+            <!--https://www.w3schools.com/tags/att_select_form.asp-->
+            <div class="col-4">
+                <div class="alert alert-success" id="succes"><strong>Goed gedaan!</strong>
+                    <p>Aww yeah, je werd geregistreerd.</p>
+                </div>
+                <div class="alert alert-info" id="Info"><strong>Betalingswijze</strong>
+                    <p>Je betalingswijze is <span id="welkeBetaling"></span></p>
+                </div>
+                <div class="alert alert-danger" id="Danger"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--https://www.w3schools.com/js/js_arrays.asp  arrays -->
+    <script>
+        let errors = [];
+        document.getElementById("succes").style.display = "none";
+        document.getElementById("Info").style.display = "none";
+        document.getElementById("Danger").style.display = "none";
+
+        //https://www.w3resource.com/javascript/form/non-empty-field.php
+        //checkemptyfield functie door het kijken of de input een value heeft zoniet word er een tekst gespushed.
+        function checkEmptyField(name, tekstje) {
+            var element = document.getElementById(name).value;
+            if (element === "") {
+                //https://www.w3schools.com/jsref/jsref_push.asp
+                //push stuurd dit naar de laatste plaats in de array
+                errors.push(tekstje);
+            }
+        }
+
+        //index is de positie van het item in de aary
+        function ErrorsToevoegen(item, index) {
+            //Innerhtml is bij tonen errors in bijlage gezet.
+            document.getElementById("Danger").innerHTML += item + "<br/>"
+        }
+
+        function klikkenKnop() {
+            errors = [];
+            //alle velden die gecheckt moeten worden.
+            checkEmptyField("voornaam", "Het veld voornaam is vereist.")
+            checkEmptyField("naam", "Het veld naam is vereist.")
+            checkEmptyField("gebruikersnaam", "Het veld gebruikersnaam is vereist.")
+            checkEmptyField("adres", "Het veld adres is vereist.")
+            checkEmptyField("landen", "Het veld land is vereist.")
+            checkEmptyField("provincies", "Het veld provincie is vereist.")
+
+
+            //https://www.w3schools.com/jsref/prop_style_display.asp
+            //tonen van al de errors of tonen van succes en info alert.
+            if (errors.length > 0) {
+                //https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+                document.getElementById("Danger").innerHTML = "<strong> Yikes, errors..</strong> <br/>";
+                errors.forEach(ErrorsToevoegen)
+                document.getElementById("succes").style.display = "none";
+                document.getElementById("Info").style.display = "none";
+                document.getElementById("Danger").style.display = "block";
+            } else {
+                document.getElementById("succes").style.display = "block";
+                document.getElementById("Info").style.display = "block";
+                document.getElementById("Danger").style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
